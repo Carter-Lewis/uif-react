@@ -1,1 +1,73 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@theme {
+    --font-permanent-marker: "Permanent Marker", monospace;
+}
+
+@utility flex-center {
+    @apply flex justify-center items-center;
+}
+
+@utility col-center {
+    @apply flex flex-col justify-center items-center;
+}
+
+@utility abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@utility text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #898989);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@utility radial-gradient {
+    background: radial-gradient(
+            circle at center,
+            #434343 0%,
+            #000 50%,
+            transparent 100%
+    );
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+@layer components {
+    main {
+        @apply w-full overflow-x-hidden;
+    }
+
+    nav {
+        @apply fixed z-50 w-full bg-green-900;
+
+        div {
+            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 lg:px-0 px-5 container mx-auto;
+        }
+
+        p {
+            @apply font-permanent-marker text-white font-semibold text-3xl -mb-2;
+        }
+
+        a {
+            @apply font-permanent-marker cursor-pointer text-white text-nowrap md:text-base text-sm;
+        }
+
+        ul {
+            @apply flex-center lg:gap-12 gap-7;
+        }
+
+        img {
+            @apply h-16;
+        }
+    }
+}

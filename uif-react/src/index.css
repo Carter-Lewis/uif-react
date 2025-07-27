@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap');
+
+:root {
+    --baylor-green: #154734;
+    --baylor-yellow: #FFB81C;
+}
 
 @theme {
     --font-permanent-marker: "Permanent Marker", monospace;
@@ -32,42 +37,4 @@
             #000 50%,
             transparent 100%
     );
-}
-
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-
-@layer components {
-    main {
-        @apply w-full overflow-x-hidden;
-    }
-
-    nav {
-        @apply fixed z-50 w-full bg-green-900;
-
-        div {
-            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 lg:px-0 px-5 container mx-auto;
-        }
-
-        p {
-            @apply font-permanent-marker text-white font-semibold text-3xl -mb-2;
-        }
-
-        a {
-            @apply font-permanent-marker cursor-pointer text-white text-nowrap md:text-base text-sm;
-        }
-
-        ul {
-            @apply flex-center lg:gap-12 gap-7;
-        }
-
-        img {
-            @apply h-16;
-        }
-    }
 }

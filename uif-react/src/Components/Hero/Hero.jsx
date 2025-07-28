@@ -1,10 +1,11 @@
 import styles from './Hero.module.css'
-import { SplitText } from 'gsap/all'
+import { SplitText, ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import React from 'react'
 
 const Hero = () => {
+    gsap.registerPlugin(ScrollTrigger);
     useGSAP(() => {
         const heroSplit = new SplitText('#hero-title', {type: 'chars, words' });
         const paraSplit = new SplitText('#hero-subtitle', {type: 'lines' });
@@ -25,6 +26,18 @@ const Hero = () => {
             stagger: 0.06,
             delay: 1
         });
+
+        gsap.to('#hero-title', {
+            scale: 5,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '#hero-title',
+                start: 'center center',
+                end: 'center top',
+                scrub: true,
+                ease: 'power3.inOut'
+            }
+        })
     })
 
   return (

@@ -8,9 +8,7 @@
     color: white;
     text-align: center;
     padding-top: 80px; /* Account for fixed navbar */
-    background-image: url('/Images/baylor-aerial-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
 }
 
 .heroContent {
@@ -30,4 +28,5 @@
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    font-family: 'Open Sans', sans-serif;
 }

@@ -9,7 +9,7 @@
 
 .navbar {
   width: 100%;
-  background: var(--baylor-green);
+  background: black;
   backdrop-filter: blur(8px);
   position: fixed;
   top: 0;

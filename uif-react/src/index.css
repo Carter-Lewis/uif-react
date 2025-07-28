@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap');
 
 :root {
@@ -7,34 +6,51 @@
     --baylor-yellow: #FFB81C;
 }
 
-@theme {
-    --font-permanent-marker: "Permanent Marker", monospace;
+body {
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-@utility flex-center {
-    @apply flex justify-center items-center;
+/* Custom utility classes using pure CSS */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@utility col-center {
-    @apply flex flex-col justify-center items-center;
+.col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@utility abs-center {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-@utility text-gradient {
+.text-gradient {
     background: linear-gradient(to bottom, #ffffff, #898989);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-@utility radial-gradient {
+.radial-gradient {
     background: radial-gradient(
             circle at center,
             #434343 0%,
             #000 50%,
             transparent 100%
     );
+}
+
+/* Permanent Marker font utility */
+.font-permanent-marker {
+    font-family: "Permanent Marker", cursive;
 }

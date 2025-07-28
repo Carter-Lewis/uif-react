@@ -3,7 +3,6 @@
 .aboutCard {
     display: flex;
     flex-direction: row;
-    background-color: darkgrey;
     height: 25em;
     width: 75vw;
     margin: auto;
@@ -16,12 +15,15 @@
     margin: auto;
     font-size: 5em;
     font-family: 'Permanent Marker', cursive;
-    
+    min-width: 400px;
+    flex: 2;
 }
 
 .cardContent {
     color: var(--baylor-yellow);
     margin: auto;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Open Sans', sans-serif;
+    background-color: darkgray;
+    border-radius: 1em;
 }

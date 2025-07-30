@@ -10,7 +10,7 @@ const AboutCard = (props) => {
   useGSAP(() => {
     gsap.from(cardRef.current, {
       xPercent: props.side === 'left' ? -150 : 150,
-      ease: 'power2.out',
+      ease: 'power1.out',
       scrollTrigger: {
         trigger: cardRef.current,
         start: 'top center',

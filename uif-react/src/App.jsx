@@ -15,7 +15,6 @@ function App() {
       <About />
       <Cohorts />
     </SmoothScrolling>
-      
     </>
   )
 }

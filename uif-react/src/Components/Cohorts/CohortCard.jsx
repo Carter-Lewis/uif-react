@@ -2,36 +2,23 @@ import React from "react";
 import styles from "./CohortCard.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import MemberCard from "./MemberCard";
 
 const CohortCard = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const cardStyle = {
-    backgroundImage: !isOpen ? `url('${props.imageUrl || "/Images/UIF Team.JPG"}')` : 'none',
-    width: isOpen ? 'auto' : '600px',
-    minWidth: isOpen ? '800px' : '600px',
-  };
+  
 
 return (
     <>
-        <motion.div
-            layout
-            onClick={() => setIsOpen(!isOpen)}
-            className={styles.card}
-            style={cardStyle}
-        >
-            <motion.h2 className={styles.cohortCardTitle}>{props.title}</motion.h2>
-            {!isOpen && <motion.div className={styles.cohortCardContent}>
-                <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-            </motion.div>}
-            {isOpen && 
-                    <motion.div className={styles.memberCardsWrapper}>
-                            {props.children}
-                    </motion.div>
-            }
-        </motion.div>
+        <div className={styles.cohortCard}>
+            <h2 className={styles.cohortTitle}>{props.title}</h2>
+            <p className={styles.cohortIntro}>{props.intro}</p>
+            <div className={styles.memberImageWrapper}>
+                {props.cohort.map((member) => (
+                    <MemberCard key={member.id} title={member.name} image={member.image} />
+                ))}
+            </div>
+        </div>
     </>
 );
 };

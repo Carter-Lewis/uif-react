@@ -1,66 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap');
 
-.card {
-    color: white;
-    width: 600px;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
+.cohortCard {
+    height: 5vh;
+    width: 75vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    margin-top: 30vh;
 }
 
-/* Removed green overlay for cleaner image display */
-
-.cohortCardTitle {
-    text-align: center;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 3em;
+.cohortTitle {
+    color: var(--baylor-yellow);
+    font-family: "Permanent Marker", cursive;
+    font-size: 4em;
 }
 
-.cohortCardContent {
-    padding: 20px;
-    text-align: center;
-    margin: 20px;
+.cohortIntro {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2em;
 }
 
-.memberCardWrapper {
+.memberImageWrapper {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.memberCardsWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 50px;
-    justify-content: center;
     align-items: center;
-    margin-top: 20px;
-}
-
-/* Make all images within the member cards smaller */
-.memberCardsWrapper img,
-.memberCardsWrapper * img,
-.memberCardsWrapper div img {
-    max-width: 200px !important;
-    max-height: 200px !important;
-    width: 200px !important;
-    height: 200px !important;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Style any child components within member cards */
-.memberCardsWrapper > * {
-    max-width: 100px !important;
-    font-size: 0.8rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10vh;
 }

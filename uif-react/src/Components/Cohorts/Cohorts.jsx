@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import CohortCard from "./CohortCard";
+import { cohortOneMembers } from '../../../Constants/constants'
 
 const Cohorts = () => {
   useGSAP(() => {
@@ -25,11 +26,8 @@ const Cohorts = () => {
         Cohorts
       </h1>
       <div className={styles.cohortsCardsWrapper}>
-        <CohortCard title="Cohort Zero" backgroundImage="/Images/UIF Team.JPG">
-          <img src="/Images/Warren Huang.JPG" alt="Carter Lewis" />
-          <img src="/Images/Carter Lewis.JPG" alt="Carter Lewis" />
-          <img src="/Images/Ethan Friend.JPG" alt="Carter Lewis" />
-          <img src="/Images/Spencer Yim.JPG" alt="Carter Lewis" />
+        <CohortCard title="Cohort Zero" intro='Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, delectus?' cohort={cohortOneMembers}>
+
         </CohortCard>
       </div>
     </div>
